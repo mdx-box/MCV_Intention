@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        
+   	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0;">
+    
+
+    <title>HAIRD: multimodal and cross view dataset for human assembly intention recognition</title>
+
+
+    <!-- Main StyleSheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+
+    <link rel="stylesheet" href="owl-slider/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="owl-slider/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="fonts/icons-fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="fonts/icons-linear.css">
+    <link href="bxslider/jquery.bxslider.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="style-global.css" rel="stylesheet" type="text/css" />
+    <link href="style-responsive.css" rel="stylesheet" type="text/css" />
+   
+    
+	
+    <script src="js/jquery.js"></script>
+    <script src="owl-slider/owl.carousel.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+	    jQuery(document).ready(function( $ ) {
+	        $('.counter').counterUp({
+	            delay: 10,
+	            time: 2000
+	        });
+	    });
+    </script>	
+    <script src="contactform/contactform.js"></script>						   
+</head>
+
+<body id="home">
+
+
+
+	<div class="topbar flf zidx5">
+		<div class="container">
+			
+			<h3>
+				<!-- <a href="tel:#"><span class="fa-solid fa-phone"></span>+1234567890</a> &nbsp; &nbsp; &nbsp;
+				<a href="mailto:#"><span class="fa-solid fa-envelope"></span> evvy@websitename.com</a> -->
+			</h3>
+
+		</div>
+	</div>
+
+
+	<header class="p_fixed_basic zidx2 ts_1 fw">
+		<div class="container dflex_basic">
+
+		    <a href="index.html" class="logo"><img src="images/logo.jpg" alt="" /></a>
+			<h1>HAIRD: A Multimodal and Cross-view dataset for Human Assembly Intention Recognition</h1>
+	</header>
+
+
+	<div class="banner2">
+		<div class="container">
+		</div>
+		<img src="images/page.png" alt="" class="img_basic imgfit_basic aspectratio_16_16" />
+	</div>
+
+
+<!-- 数据集背景介绍 -->
+	<div class="banner">
+		<div class="container">
+			<h3>Background for HAIRD:</h3>
+			<p>Industry 5.0 reforms the manufacturing paradigm from technology-driven to value-driven mode, where the humans play a vital role in manufacturing scenario. 
+				Under this background, human-robot collabration is emerging and attracts more and more attention. This will require a seamless collboration between 
+				human and robots in real time. Hence, the robot should deeply understand human assembly intention accurately with assembly scene data, and further provide
+				assistance.</p>
+			<p>Hence, it is necessary to construct a dataset containing the operator assembly process so that the robot can make full use of the assembly scene knowledge 
+				to identify the operator assembly intention, and provice corresponding assistance. On the one hand, the cognitive burden of human operator can be decrsaed and
+			the quality of product will be increased!</p>
+			<h3>Introduction to HAIRD:</h3>
+			<p>HAIRD is a dataset containing multi modal (RGB, depth, skeleton, optical flow, IR, masked operator) and a cross view of right above. An example of HAIRD
+				as shown in the following gif figure. Here thanks Mr. JiaCheng Li for helping make demonstration.
+			</p>
+		</div>
+		<img src="images/all.gif" alt="" class="img_basic imgfit_basic aspectratio_16_16" />
+	</div>
+	<!-- 环境介绍 -->
+	<div class="banner">
+		<div class="container">
+			<h3>Introduction to  Environments:</h3>
+			<h4>1. Experiment hardware environment</h4>
+			<p>The dataset collection hardware system consists of two depth cameras (camera_front and camera_Up), an assembly, robot, human operator, and server. Camera_front is 
+				used to collect the scene data right ahead with RGB modal. Other modal (depth, skeleton, optical flow, IR, masked operator) are from camera_front. Camera_up is responsible for 
+				supplementing the scene data with another view, where the assembly parts, operator's hand can be  observed directly.
+			</p>
+		</div>
+		<img src="images/Environment.jpg" alt="" class="img_basic imgfit_basic aspectratio_16_16" />
+	</div>
+
+	<div class="banner">
+		<div class="container">
+			<h4>2. Experiment software environment</h4>
+			<p>The software is developed by PySide2, opencv, and corresponding SDK of cameras (here is Orbbec and Intel RealSense D345i). This software consists of four modules, namely
+				parameters setting, modal selection, save path selection, and data display. The source code can be found in <a href="https://github.com/123456453/Dataset_Collection_software.git">Author's github Repository</a> 
+			</p>
+			<p>Parameters settings module: set key parameters, namely height, width, data collection frame rate (fps).</p>
+			<p>Modal selection module: select the modal and views you want to collect and save by check the box.</p>
+			<p>Save path selection module: select the save path you want to save collected modal and views.</p>
+			<p>Data display module: display all modal and views for user.</p>
+			
+		</div>
+		<img src="images/software.jpg" alt="" class="img_basic imgfit_basic aspectratio_16_16" />
+	</div>
+
+	<!-- 数据集制作介绍 -->
+	<div class="banner">
+		<div class="container">
+			<h3>Introduction to HAIRD rules:</h3>
+			<p>Data construction rules can be found folllowing PDF documents.</p>
+		</div>
+		<embed src="data_construction_rules.pdf" type="application/pdf" width="1000px" height="1500px">
+	</div>	
+
+	<!-- Introduction to assembly -->
+	<div class="banner">
+		<div class="container">
+			<h3>Introduction to the assembly:</h3>
+			<p>The assembly is a satellite, which is modeled by open source software <a href="https://www.freecad.org/">FreeCad software</a>. The model view and explosive view can be found as follows.</p>
+		</div>
+		<iframe id="statellite" scrolling="0" src="https://sketchfab.com/3d-models/satellite-4e6146f32d1b4821b2489cb377b529eb/embed?ui_infos=0&amp;ui_watermark=0&amp;ui_help=0&amp;ui_settings=0&amp;ui_inspector=0&amp;ui_annotations=0&amp;ui_stop=0&amp;ui_vr=0&amp;preload=1&amp;autostart=1&amp;ui_hint=2&amp;autospin=0.2" >
+		</iframe>
+	</div>	
+	<div class="banner1">
+		<iframe id="statellite" scrolling="0" src="https://sketchfab.com/3d-models/explosive-view-of-satellite-23f1da1b2e67449baf0523cf9d0e9fb4/embed?ui_infos=0&amp;ui_watermark=0&amp;ui_help=0&amp;ui_settings=0&amp;ui_inspector=0&amp;ui_annotations=0&amp;ui_stop=0&amp;ui_vr=0&amp;preload=1&amp;autostart=1&amp;ui_hint=2&amp;autospin=0.2" >
+		</iframe>
+	</div>
+
+	<!-- 简单介绍标注细节 -->
+	<div class="banner">
+		<div class="container">
+			<h3>Introduction to dataset annotations:</h3>
+			<p>Here is the example about dataset annotations</p>
+		</div>
+		<img src="images/table.jpg" alt="" class="img_basic imgfit_basic aspectratio_16_16" />
+	</div>
+
+	<!--footer-->
+
+
+	<div class="banner">
+		<div class="container">
+			<h3>Reference:</h3>
+			<p>[1] Leng, Jiewu, et al. "Industry 5.0: Prospect and retrospect." Journal of Manufacturing Systems 65 (2022): 279-295.</p>
+			<p>[2] Huang, Sihan, et al. "Industry 5.0 and Society 5.0—Comparison, complementation and co-evolution." Journal of manufacturing systems 64 (2022): 424-428.</p>
+			<p>[3] Zheng, Hao, Regina Lee, and Yuqian Lu. "HA-ViD: A Human Assembly Video Dataset for Comprehensive Assembly Knowledge Understanding." Advances in Neural Information Processing Systems 36 (2024).</p>
+			<p>[4] Cicirelli, Grazia, et al. "The HA4M dataset: Multi-Modal Monitoring of an assembly task for Human Action recognition in Manufacturing." Scientific Data 9.1 (2022): 745.</p>
+		</div>
+	</div>
+
+	<script>
+		var menuid = '#headnav';
+		var gaptop = 135;
+		var scrollspeed = 1200;
+		var menu_active_class = 'active';
+	</script>	
+	<script src="js/bliss.js"></script>
+	<script src="js/waypoints.min.js"></script>
+	<script src="js/jquery.counterup.js"></script>                          
+</body>
+</html>
+<!-- Template By: LayoutFlow, URL: https://layoutflow.com/  -->
